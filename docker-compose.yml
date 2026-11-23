@@ -18,6 +18,7 @@
       build: ./users-service
       environment:
         DB_URL: jdbc:postgresql://users-db:5432/users
+        JWT_SECRET: ${JWT_SECRET:-dev-only-secret-change-me-to-at-least-32-chars-long}
       ports:
         - "8081:8080"
       depends_on:
